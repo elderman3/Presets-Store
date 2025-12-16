@@ -1,5 +1,5 @@
 " In addition to the configuration here, make sure all relevant Ctrl + combinations are handled by IDE, not vim
-" Remap Alt + 1 -> Ctrl + Shift + E / Ctrl + T
+" Remap Alt + 1 -> Ctrl + B
 
 set scrolloff=5 
 set incsearch 
