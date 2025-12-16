@@ -41,7 +41,7 @@
         { "before": ["<leader>", "j"], "commands": ["workbench.action.focusNextGroup"] },
         { "before": ["<leader>", "k"], "commands": ["workbench.action.focusPreviousGroup"] },
 
-        // Window Splits
+        // Window splits
         { "before": ["<leader>", "S"], "commands": ["workbench.action.splitEditorRight"] },
         { "before": ["<leader>", "s"], "commands": ["workbench.action.splitEditorDown"] },
         { "before": ["<leader>", "c"], "commands": ["workbench.action.closeEditorsInGroup"] },
@@ -63,14 +63,20 @@
         { "before": ["<leader>", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
 
         // Run current (no debug)
-        { "before": ["<leader>", "r"], "commands": ["workbench.action.debug.startWithoutDebugging"] }
+        { "before": ["<leader>", "r"], "commands": ["workbench.action.debug.startWithoutDebugging"] },
+
+        // Exact goto mark
+        { "before": ["<leader>", "m"], "after": ["`"] }
     ],
 
     // Visual mode 
     "vim.visualModeKeyBindingsNonRecursive": [
         // $^ Swap
         { "before": ["$"], "after": ["^"] },
-        { "before": ["^"], "after": ["$"] }
+        { "before": ["^"], "after": ["$"] },
+
+        // Exact goto mark
+        { "before": ["<leader>", "m"], "after": ["`"] }
     ],
 
     // $^ Swap, Pending mode
