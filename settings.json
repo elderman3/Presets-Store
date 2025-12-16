@@ -1,7 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "C_Cpp.intelliSenseEngine": "disabled",
-    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorTheme": "Night Owl (No Italics)",
     "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
 
     // Let VSCode handle these
