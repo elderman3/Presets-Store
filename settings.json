@@ -1,7 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "C_Cpp.intelliSenseEngine": "disabled",
-    "workbench.colorTheme": "Night Owl (No Italics)",
+    "workbench.colorTheme": "GitHub Dark High Contrast",
     "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
 
     // Let VSCode handle these
@@ -83,5 +83,92 @@
     "vim.operatorPendingModeKeyBindingsNonRecursive": [
         { "before": ["$"], "after": ["^"] },
         { "before": ["^"], "after": ["$"] }
-    ] 
+    ],
+
+    "editor.semanticHighlighting.enabled": true,
+
+    "editor.semanticTokenColorCustomizations": {
+        "[GitHub Dark High Contrast]": {
+        "rules": {
+            "type": "#E5D26A",
+
+            "property": "#66D9EF"
+        }
+        }
+    },
+
+    "editor.tokenColorCustomizations": {
+        "[GitHub Dark High Contrast]": {
+        "textMateRules": [
+            {
+            "scope": [
+                "meta.preprocessor",
+                "keyword.control.directive",
+                "keyword.control.directive.include",
+                "meta.preprocessor.include",
+                "keyword.control.import",
+                "keyword.control.directive.include.cpp",
+                "meta.preprocessor.include.cpp"
+            ],
+            "settings": {
+                "foreground": "#7EE787"
+            }
+            },
+
+            {
+            "scope": [
+                "storage.type.typedef",
+                "storage.type.typedef.cpp",
+                "keyword.other.typedef",
+                "storage.modifier.specifier.const.cpp"
+            ],
+            "settings": {
+                "foreground": "#7EE787"
+            }
+            },
+{
+            "scope": [
+                "storage.type.built-in.primitive.cpp"
+                
+            ],
+            "settings": {
+                "foreground": "#b75afa"
+            }
+            },
+
+            {
+            "scope": [
+                "string.quoted.double.cpp"
+                
+            ],
+            "settings": {
+                "foreground": "#329cd1"
+            }
+            },
+
+            {
+            "scope": [
+                "entity.name.type.struct",
+                "entity.name.type.struct.cpp",
+                "entity.name.type"
+                
+            ],
+            "settings": {
+                "foreground": "#E5D26A"
+            }
+            },
+
+            {
+            "scope": [
+                "variable.other.member",
+                "variable.other.member.cpp",
+                "variable.other.property"
+            ],
+            "settings": {
+                "foreground": "#66D9EF"
+            }
+            }
+        ]
+        }
+    }
 }
