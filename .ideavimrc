@@ -1,0 +1,73 @@
+" In addition to the configuration here, make sure all relevant Ctrl + combinations are handled by IDE, not vim
+" Remap Alt + 1 -> Ctrl + Shift + E / Ctrl + T
+
+set scrolloff=5 
+set incsearch 
+
+map Q gq 
+
+" Highlight copied text 
+Plug 'machakann/vim-highlightedyank' 
+" Commentary plugin 
+Plug 'tpope/vim-commentary' 
+
+" Multiwindow split mode 
+set splitbelow 
+
+" Leader 
+let mapleader=" " 
+
+" Active Window 
+nmap <leader>h <Action>(PreviousTab) 
+nmap <leader>l <Action>(NextTab)
+
+" Moving between splits 
+nmap <leader>H <C-w>h 
+nmap <leader>j <C-w>w 
+nmap <leader>k <C-w>W 
+nmap <leader>L <C-w>l
+
+" Default split = vertical 
+nmap <leader>S <C-w>v 
+
+" Optional: horizontal split on Shift+S 
+nmap <leader>s <C-w>s 
+
+" Close current editor tab 
+nmap <leader>q <Action>(CloseContent) 
+
+" Project/file navigation 
+nmap <leader>e <Action>(ActivateProjectToolWindow) 
+nmap <leader>p <Action>(GotoFile) 
+
+" Next occurrence in multicursor 
+nmap <leader>n <Plug>NextWholeOccurrence 
+
+" Go to declaration 
+nmap <leader>d <Action>(GotoDeclaration) 
+
+" Terminal 
+nmap <leader>t <Action>(ActivateTerminalToolWindow) 
+nmap <leader>kt <Action>(CloseActiveTab) 
+
+" Comment toggle 
+nmap <leader>c <Action>(CommentByLineComment) 
+vmap <leader>c <Action>(CommentByLineComment) 
+
+" Run current (no debug) 
+nmap <leader>r <Action>(RunContextConfiguration) 
+
+" Jump to mark with other key 
+nmap <leader>m 
+vmap <leader>m 
+
+" Swap ^ and $ 
+nnoremap $ ^ 
+nnoremap ^ $ 
+vnoremap $ ^ 
+vnoremap ^ $ 
+onoremap $ ^ 
+onoremap ^ $ 
+
+"Clipboard behavior 
+set clipboard+=unnamedplus

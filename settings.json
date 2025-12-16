@@ -1,0 +1,80 @@
+{
+    "files.autoSave": "afterDelay",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
+
+    // Let VSCode handle these
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-x>": false,
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-f>": false,
+        "<C-p>": false,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-y>": false
+     },
+
+    // Vim settings
+    "vim.leader": "<space>",
+    // "vim.useSystemClipboard": true,          
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.smartRelativeLine": true,
+
+    "vim.easymotion": true,
+    // Normal mode
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // $^ Swap
+        { "before": ["$"], "after": ["^"] },
+        { "before": ["^"], "after": ["$"] },
+
+        // Switch tabs
+        { "before": ["<leader>", "h"], "commands": ["workbench.action.previousEditor"] },
+        { "before": ["<leader>", "l"], "commands": ["workbench.action.nextEditor"] },
+
+        // Move windows
+        { "before": ["<leader>", "H"], "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["<leader>", "L"], "commands": ["workbench.action.focusRightGroup"] },
+        { "before": ["<leader>", "j"], "commands": ["workbench.action.focusNextGroup"] },
+        { "before": ["<leader>", "k"], "commands": ["workbench.action.focusPreviousGroup"] },
+
+        // Window Splits
+        { "before": ["<leader>", "S"], "commands": ["workbench.action.splitEditorRight"] },
+        { "before": ["<leader>", "s"], "commands": ["workbench.action.splitEditorDown"] },
+
+        // Close current editor tab
+        { "before": ["<leader>", "q"], "commands": ["workbench.action.closeActiveEditor"] },
+
+        // Project/file navigation
+        { "before": ["<leader>", "e"], "commands": ["workbench.view.explorer"] },
+        { "before": ["<leader>", "p"], "commands": ["workbench.action.quickOpen"] },
+
+        // Next occurrence (multi-cursor)
+        { "before": ["<leader>", "n"], "commands": ["editor.action.addSelectionToNextFindMatch"] },
+
+        // Go to gobal definition
+        { "before": ["<leader>", "d"], "commands": ["editor.action.revealDefinition"] },
+
+        // Terminal
+        { "before": ["<leader>", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
+
+        // Run current (no debug)
+        { "before": ["<leader>", "r"], "commands": ["workbench.action.debug.startWithoutDebugging"] }
+    ],
+
+    // Visual mode 
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // $^ Swap
+        { "before": ["$"], "after": ["^"] },
+        { "before": ["^"], "after": ["$"] }
+    ],
+
+    // $^ Swap, Pending mode
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        { "before": ["$"], "after": ["^"] },
+        { "before": ["^"], "after": ["$"] }
+    ] 
+}
