@@ -41,8 +41,12 @@ nmap <leader>p <Action>(GotoFile)
 " Next occurrence in multicursor 
 nmap <leader>n <Plug>NextWholeOccurrence 
 
-" Go to declaration 
-nmap <leader>d <Action>(GotoDeclaration) 
+" Go to declaration, inactive in favor of void delete 
+" nmap <leader>d <Action>(GotoDeclaration) 
+
+" Void delete
+nmap <leader>d "_d
+vmap <leader>d "_d
 
 " Terminal 
 nmap <leader>t <Action>(ActivateTerminalToolWindow) 

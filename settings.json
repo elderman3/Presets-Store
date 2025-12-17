@@ -56,8 +56,11 @@
         // Next occurrence (multi-cursor)
         { "before": ["<leader>", "n"], "commands": ["editor.action.addSelectionToNextFindMatch"] },
 
-        // Go to gobal definition
-        { "before": ["<leader>", "d"], "commands": ["editor.action.revealDefinition"] },
+        // Go to gobal definition, inactive in favor of void delete
+        // { "before": ["<leader>", "d"], "commands": ["editor.action.revealDefinition"] },
+
+        // Void delete
+        { "before": ["<leader>", "D"], "after": ["\"", "_", "d"] },
 
         // Terminal
         { "before": ["<leader>", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
@@ -74,6 +77,41 @@
         // $^ Swap
         { "before": ["$"], "after": ["^"] },
         { "before": ["^"], "after": ["$"] },
+
+        // Switch tabs
+        { "before": ["<leader>", "h"], "commands": ["workbench.action.previousEditor"] },
+        { "before": ["<leader>", "l"], "commands": ["workbench.action.nextEditor"] },
+
+        // Move windows
+        { "before": ["<leader>", "H"], "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["<leader>", "L"], "commands": ["workbench.action.focusRightGroup"] },
+        { "before": ["<leader>", "j"], "commands": ["workbench.action.focusNextGroup"] },
+        { "before": ["<leader>", "k"], "commands": ["workbench.action.focusPreviousGroup"] },
+
+        // Window splits
+        { "before": ["<leader>", "S"], "commands": ["workbench.action.splitEditorRight"] },
+        { "before": ["<leader>", "s"], "commands": ["workbench.action.splitEditorDown"] },
+        { "before": ["<leader>", "c"], "commands": ["workbench.action.closeEditorsInGroup"] },
+
+        // Close current editor tab
+        { "before": ["<leader>", "q"], "commands": ["workbench.action.closeActiveEditor"] },
+
+        // Project/file navigation
+        { "before": ["<leader>", "e"], "commands": ["workbench.view.explorer"] },
+        { "before": ["<leader>", "p"], "commands": ["workbench.action.quickOpen"] },
+
+        // Next occurrence (multi-cursor)
+        { "before": ["<leader>", "n"], "commands": ["editor.action.addSelectionToNextFindMatch"] },
+
+        // Void delete
+        { "before": ["<leader>", "D"], "after": ["\"", "_", "d"] },
+
+        // Terminal
+        { "before": ["<leader>", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
+
+        // Run current (no debug)
+        { "before": ["<leader>", "r"], "commands": ["workbench.action.debug.startWithoutDebugging"] },
+
 
         // Exact goto mark
         { "before": ["<leader>", "m"], "after": ["`"] }
