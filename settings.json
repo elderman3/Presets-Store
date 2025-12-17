@@ -60,7 +60,7 @@
         // { "before": ["<leader>", "d"], "commands": ["editor.action.revealDefinition"] },
 
         // Void delete
-        { "before": ["<leader>", "D"], "after": ["\"", "_", "d"] },
+        { "before": ["<leader>", "d"], "after": ["\"", "_", "d"] },
 
         // Terminal
         { "before": ["<leader>", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
@@ -104,7 +104,7 @@
         { "before": ["<leader>", "n"], "commands": ["editor.action.addSelectionToNextFindMatch"] },
 
         // Void delete
-        { "before": ["<leader>", "D"], "after": ["\"", "_", "d"] },
+        { "before": ["<leader>", "d"], "after": ["\"", "_", "d"] },
 
         // Terminal
         { "before": ["<leader>", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
