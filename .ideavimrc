@@ -48,6 +48,10 @@ nmap <leader>n <Plug>NextWholeOccurrence
 nmap <leader>d "_d
 vmap <leader>d "_d
 
+" Void change
+nmap <leader>c "_k
+vmap <leader>c "_c
+
 " Terminal 
 nmap <leader>t <Action>(ActivateTerminalToolWindow) 
 nmap <leader>kt <Action>(CloseActiveTab) 
